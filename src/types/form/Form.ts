@@ -1,24 +1,33 @@
-import { ChangeEventHandler, ReactNode } from 'react';
+import { ChangeEvent, FormEventHandler, ReactNode } from 'react';
 import { IColorType } from '..';
 
 export interface ILabel {
   label: string;
   inputname: string;
   labelclassname?: string;
+  labelhidden?: boolean;
 }
 
 export interface InputProps extends ILabel {
   value: string | number;
+  id?: string;
   type?: InputType;
   classname?: string;
-  handleChange?: (_e?: ChangeEventHandler<HTMLInputElement>) => void;
+  required?: boolean;
+  disabled?: boolean;
+  handleChange: (
+    _e?:
+      | ChangeEvent<HTMLInputElement>
+      | ChangeEvent<HTMLSelectElement>
+      | React.FormEvent<HTMLOptionElement>
+  ) => void;
 }
 
 export interface SelectProps extends InputProps {
   options: SelectOptions[];
 }
 
-type SelectOptions = {
+export type SelectOptions = {
   label: string;
   value: string | number;
 };
@@ -27,6 +36,7 @@ type IDisplayType = 'flex' | 'block' | 'hidden';
 
 export interface IFormProps {
   children: ReactNode;
+  onSubmit: FormEventHandler<HTMLFormElement>;
 }
 
 export interface IError {

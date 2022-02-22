@@ -1,26 +1,37 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { InputProps } from '../../types/form/Form';
 import Error from './Error';
 import Label from './Label';
 
 export default function Input({
   inputname,
+  id,
   value,
   type,
   label,
+  required = true,
+  disabled = false,
   classname = '',
   labelclassname,
   handleChange,
 }: InputProps) {
+  useEffect(() => {
+    if (!id) {
+      id = inputname;
+    }
+  }, [id]);
+
   return (
     <div className="relative z-0 mb-6 w-full group">
       <input
+        id={id}
         type={type}
         name={inputname}
         value={value}
         className={`block py-2.5 px-0 w-full text-base text-secondary-500 bg-transparent border-0 border-b-2 border-secondary-400 appearance-none dark:focus:border-primary focus:outline-none focus:ring-0 focus:border-primary peer dark:text-txt-primary ${classname} `}
-        placeholder=" "
-        required
+        placeholder={' '}
+        disabled={disabled}
+        required={required}
         onChange={(e) => handleChange(e)}
       />
       <Label

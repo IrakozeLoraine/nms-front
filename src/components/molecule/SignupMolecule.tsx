@@ -1,4 +1,4 @@
-import React, { ChangeEventHandler, useState } from 'react';
+import React, { ChangeEvent, FormEvent, useState } from 'react';
 import Button from '../atoms/Button';
 import Form from '../atoms/Form';
 import Input from '../atoms/Input';
@@ -15,18 +15,32 @@ export default function SignupMolecule() {
     confirmpassword: '',
   });
 
-  function handleChange(e: ChangeEventHandler<HTMLInputElement>) {
-    setAuth((auth) => ({
-      ...auth,
-      [e.target.name]: e.target.value,
-    }));
+  function handleChange(
+    e?:
+      | ChangeEvent<HTMLInputElement>
+      | ChangeEvent<HTMLSelectElement>
+      | FormEvent<HTMLOptionElement>
+  ) {
+    if (e) {
+      {
+        setAuth((auth) => ({
+          ...auth,
+
+          //@ts-ignore
+          [e?.target.name]: e?.target.value,
+        }));
+      }
+    }
   }
 
-  console.log(auth);
+  const handleSubmit = (e: FormEvent) => {
+    e.preventDefault();
+    console.log(auth);
+  };
 
   return (
     <>
-      <Form>
+      <Form onSubmit={handleSubmit}>
         <h2 className="text-xl uppercase pb-12 text-center text-txt-primary">
           Sign up
         </h2>

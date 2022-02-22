@@ -1,6 +1,7 @@
 import React from 'react';
 import { SelectProps } from '../../types/form/Form';
 import Error from './Error';
+import Input from './Input';
 import Label from './Label';
 
 export default function Select({
@@ -18,8 +19,7 @@ export default function Select({
         name={inputname}
         value={value}
         onChange={(e) => handleChange(e)}
-        className={`pt-3 pb-2 block w-full px-0 mt-0 bg-transparent appearance-none border-0 border-b-2 z-1 focus:outline-none focus:ring-0 focus:border-primary border-secondary-400  ${classname}`}
-        // className={`block py-2.5 px-0 w-full text-sm text-secondary-500 bg-transparent border-0 border-b-2 border-secondary-400 appearance-none dark:focus:border-primary focus:outline-none focus:ring-0 focus:border-primary peer dark:text-txt-primary ${classname}`}
+        className={`block py-1 px-0 w-full text-base text-secondary-500 bg-transparent border-0 border-b-2 border-secondary-400 dark:focus:border-primary focus:outline-none focus:ring-0 focus:border-primary peer dark:text-txt-primary cursor-pointer ${classname}`}
       >
         <option value="" selected disabled hidden></option>
         {options.map((option) => (
@@ -36,6 +36,7 @@ export default function Select({
         label={label}
         inputname={inputname}
         labelclassname={`absolute duration-300 top-3 -z-1 origin-0 text-gray-500 uppercase ${labelclassname}`}
+        labelhidden={value !== ''}
       />
       <Error message={''} display={'hidden'} />
     </div>
