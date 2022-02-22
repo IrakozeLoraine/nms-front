@@ -1,4 +1,4 @@
-import { ChangeEvent, FormEventHandler, ReactNode } from 'react';
+import { ChangeEvent, FormEvent, FormEventHandler, ReactNode } from 'react';
 import { IColorType } from '..';
 
 export interface ILabel {
@@ -21,6 +21,14 @@ export interface InputProps extends ILabel {
       | ChangeEvent<HTMLSelectElement>
       | React.FormEvent<HTMLOptionElement>
   ) => void;
+}
+
+export interface CheckboxProps extends ILabel {
+  value: string | boolean;
+  handleChange: (_e: ChangeEvent<HTMLInputElement>) => any;
+  isChecked?: boolean;
+  disabled?: boolean;
+  classname?: string;
 }
 
 export interface SelectProps extends InputProps {

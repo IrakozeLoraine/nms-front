@@ -14,6 +14,9 @@ module.exports = {
       minWidth: {
         minimum: '6.25rem',
       },
+      backgroundImage: {
+        check: "url('./src/public/icons/check.svg')",
+      },
     },
   },
   variants: {

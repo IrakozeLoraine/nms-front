@@ -1,14 +1,18 @@
-import { useState } from 'react';
-import logo from './logo.svg';
 import './App.css';
-import Input from './components/atoms/Input';
-import Form from './components/atoms/Form';
 import Signup from './views/Signup';
+import { Route, Routes } from 'react-router-dom';
+import Signin from './views/Signin';
+import AdminLogin from './views/AdminLogin';
 
 function App() {
   return (
     <>
-      <Signup />
+      <Routes>
+        <Route path="/" element={<Signup />} />
+        <Route path="/register" element={<Signup />} />
+        <Route path="/login" element={<Signin />} />
+        <Route path="/admin-login" element={<AdminLogin />} />
+      </Routes>
     </>
   );
 }

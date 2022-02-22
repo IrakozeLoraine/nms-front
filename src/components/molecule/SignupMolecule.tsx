@@ -105,7 +105,7 @@ export default function SignupMolecule() {
         </div>
         <p className="text-xs py-2 text-center text-txt-primary uppercase">
           already created an account in our system?{' '}
-          <a href="/" className="text-primary">
+          <a href="/login" className="text-primary hover:underline">
             LOGIN
           </a>
         </p>
