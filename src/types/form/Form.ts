@@ -22,6 +22,15 @@ export interface InputProps extends ILabel {
       | React.FormEvent<HTMLOptionElement>
   ) => void;
 }
+export interface ISearchProps {
+  handleChange: (_e: ChangeEvent<HTMLInputElement>) => void;
+  placeholder?: string;
+  width?: string;
+  classname?: string;
+  inputname: string;
+  value: string;
+  id?: string;
+}
 
 export interface CheckboxProps extends ILabel {
   value: string | boolean;
