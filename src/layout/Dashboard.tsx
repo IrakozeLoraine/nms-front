@@ -1,12 +1,7 @@
-import React, { ReactNode, useState } from 'react';
-import Notification from '../components/atoms/Notification';
-import Search from '../components/atoms/Search';
-import NotificationTrigger from '../components/molecule/NoficationTrigger';
 import Header from '../components/organisms/Header';
 import LeftSidebar from '../components/organisms/LeftSidebar';
 import RightSidebar from '../components/organisms/RightSidebar';
 import { DashboardProps } from '../types/custom/Dashboard';
-import { NotificationStatus } from '../types/notifications/Notification';
 
 export default function Dashboard({
   children,

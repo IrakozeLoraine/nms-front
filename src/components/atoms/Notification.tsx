@@ -1,7 +1,6 @@
 import moment from 'moment';
 import React from 'react';
 import {
-  NotificationInfo,
   NotificationProps,
   NotificationStatus,
 } from '../../types/notifications/Notification';
