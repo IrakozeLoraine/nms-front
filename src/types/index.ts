@@ -5,7 +5,8 @@ export type IColorType =
   | 'main'
   | 'secondary-400'
   | 'secondary-500'
-  | 'red-600';
+  | 'red-600'
+  | 'txt-primary';
 
 export type IFontSizeType =
   | 'xs'
@@ -16,7 +17,8 @@ export type IFontSizeType =
   | 'xl'
   | '2xl'
   | '3xl'
-  | '4xl';
+  | '4xl'
+  | '5xl';
 
 export type ITextTransformType =
   | 'capitalize'

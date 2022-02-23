@@ -1,26 +1,20 @@
-import React, { ReactNode } from 'react';
+import React, { ReactNode, useState } from 'react';
+import Notification from '../components/atoms/Notification';
 import Search from '../components/atoms/Search';
+import NotificationTrigger from '../components/molecule/NoficationTrigger';
+import Header from '../components/organisms/Header';
 import LeftSidebar from '../components/organisms/LeftSidebar';
 import RightSidebar from '../components/organisms/RightSidebar';
+import { DashboardProps } from '../types/custom/Dashboard';
+import { NotificationStatus } from '../types/notifications/Notification';
 
 export default function Dashboard({
   children,
-  showSearch = false,
+  showSearch,
   handleSearch,
-  searchname = '',
-  searchvalue = '',
-}: {
-  children: ReactNode;
-  showSearch?: boolean;
-  handleSearch?: () => {};
-  searchname?: string;
-  searchvalue?: string;
-}) {
-  const searchHandle = () => {
-    if (handleSearch) {
-      handleSearch;
-    }
-  };
+  searchname,
+  searchvalue,
+}: DashboardProps) {
   return (
     <div className="flex bg-secondary">
       {/* sidebar */}
@@ -29,16 +23,13 @@ export default function Dashboard({
       </div>
       {/* content */}
       <div className="w-full md:col-span-9 xl:col-span-9 col-span-10 block">
-        {showSearch && (
-          <div className="flex items-center justify-center py-9">
-            <Search
-              handleChange={searchHandle}
-              inputname={searchname}
-              value={searchvalue}
-            />
-          </div>
-        )}
-        <div className="block relative w-full h-auto py-5 px-8">{children}</div>
+        <Header
+          handleSearch={handleSearch}
+          searchname={searchname}
+          showSearch={showSearch}
+          searchvalue={searchvalue}
+        />
+        <div>{children}</div>
       </div>
       {/* rightsidebar */}
       <div className="hidden md:block w-80 h-screen top-0 lg:sticky ">

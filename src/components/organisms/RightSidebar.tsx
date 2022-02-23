@@ -58,6 +58,7 @@ export default function RightSidebar() {
       <Heading
         fontSize="2xl"
         fontWeight="bold"
+        color="main"
         className="pt-14 text-center uppercase"
       >
         Courses
