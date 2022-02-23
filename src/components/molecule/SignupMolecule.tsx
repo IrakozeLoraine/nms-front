@@ -1,6 +1,7 @@
 import React, { ChangeEvent, FormEvent, useState } from 'react';
 import Button from '../atoms/Button';
 import Form from '../atoms/Form';
+import Heading from '../atoms/Heading';
 import Input from '../atoms/Input';
 import Select from '../atoms/Select';
 
@@ -41,9 +42,14 @@ export default function SignupMolecule() {
   return (
     <>
       <Form onSubmit={handleSubmit}>
-        <h2 className="text-xl uppercase pb-12 text-center text-txt-primary">
+        <Heading
+          fontSize="xl"
+          fontWeight="normal"
+          color="txt-primary"
+          className="pb-12 text-center uppercase"
+        >
           Sign up
-        </h2>
+        </Heading>
         <div className="grid xl:grid-cols-2 xl:gap-6">
           <Input
             inputname={'firstname'}

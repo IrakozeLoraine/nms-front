@@ -9,6 +9,7 @@ import profile from '../../public/icons/profile.svg';
 import logout from '../../public/icons/logout.svg';
 import Button from '../atoms/Button';
 import { Link } from 'react-router-dom';
+import Heading from '../atoms/Heading';
 
 export default function RightSidebar() {
   const defaultLinks = () => {
@@ -54,9 +55,13 @@ export default function RightSidebar() {
   };
   return (
     <div className="w-60 max-w-xs bg-primary md:h-screen overflow-y-scroll">
-      <h2 className={`text-2xl text-main pt-14 text-center uppercase`}>
+      <Heading
+        fontSize="2xl"
+        fontWeight="bold"
+        className="pt-14 text-center uppercase"
+      >
         Courses
-      </h2>
+      </Heading>
       <div className="mb-auto h-10">
         <div className={'py-12 '}>
           <SidebarLinks className="px-11" links={defaultLinks()} isRight />

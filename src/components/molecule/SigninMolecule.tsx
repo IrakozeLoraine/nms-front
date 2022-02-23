@@ -2,6 +2,7 @@ import React, { ChangeEvent, FormEvent, useState } from 'react';
 import Button from '../atoms/Button';
 import Checkbox from '../atoms/Checkbox';
 import Form from '../atoms/Form';
+import Heading from '../atoms/Heading';
 import Input from '../atoms/Input';
 
 export default function SigninMolecule({
@@ -38,9 +39,14 @@ export default function SigninMolecule({
   return (
     <>
       <Form onSubmit={handleSubmit}>
-        <h2 className="text-xl uppercase pb-12 text-center text-txt-primary">
+        <Heading
+          fontSize="xl"
+          fontWeight="normal"
+          color="txt-primary"
+          className="pb-12 text-center uppercase"
+        >
           {header}
-        </h2>
+        </Heading>
         <Input
           inputname={'username'}
           label={usernamelabel}
