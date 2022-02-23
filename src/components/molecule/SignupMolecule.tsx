@@ -100,7 +100,7 @@ export default function SignupMolecule() {
             handleChange={(e) => handleChange(e)}
           />
         </div>
-        <div className="flex items-center justify-center pt-16">
+        <div className="flex items-center justify-center pt-8">
           <Button>REGISTER</Button>
         </div>
         <p className="text-xs py-2 text-center text-txt-primary uppercase">
