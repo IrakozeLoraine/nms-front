@@ -3,6 +3,7 @@ import { FormEvent } from 'react';
 export type IColorType =
   | 'primary'
   | 'main'
+  | 'secondary-300'
   | 'secondary-400'
   | 'secondary-500'
   | 'red-600'

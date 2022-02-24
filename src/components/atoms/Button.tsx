@@ -8,6 +8,7 @@ export default function Button<T>({
   full,
   icon,
   className = '',
+  roundedLg = true,
   hoverStyle = 'underline',
   onClick,
   ...attrs
@@ -29,9 +30,9 @@ export default function Button<T>({
     <button
       {...attrs}
       onClick={onClick}
-      className={`${
-        buttonStyle[styleType]
-      } rounded-lg font-semibold text-sm outline-none box-content
+      className={`${buttonStyle[styleType]} ${
+        roundedLg ? 'rounded-lg' : ''
+      } font-semibold text-sm outline-none box-content
       ${full ? 'w-full' : ''}
       ${padding} ${className}
       disabled:opacity-50 disabled:cursor-wait`}

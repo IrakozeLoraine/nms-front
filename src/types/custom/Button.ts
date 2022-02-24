@@ -16,6 +16,7 @@ export interface ButtonPropTypes<T>
   color?: IColorType;
   bgColor?: IColorType;
   hoverStyle?: ITextDecorationType;
+  roundedLg?: boolean;
   className?: string;
   onClick?: () => void;
 }
