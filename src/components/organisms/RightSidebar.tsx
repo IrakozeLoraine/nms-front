@@ -56,9 +56,9 @@ export default function RightSidebar() {
   return (
     <div className="w-60 max-w-xs bg-primary md:h-screen overflow-y-scroll">
       <Heading
-        fontSize="2xl"
-        fontWeight="bold"
-        color="main"
+        fontSize="text-2xl"
+        fontWeight="font-bold"
+        color="text-main"
         className="pt-14 text-center uppercase"
       >
         Courses
@@ -69,7 +69,13 @@ export default function RightSidebar() {
         </div>
 
         <div className="flex items-center justify-center">
-          <Button onClick={() => {}} hoverStyle="no-underline" className="px-3">
+          <Button
+            onClick={() => {}}
+            hoverStyle="no-underline"
+            className="px-3"
+            bgColor="border-main"
+            styleType="outline"
+          >
             <span className={`text-main text-base font-medium uppercase`}>
               View all
             </span>

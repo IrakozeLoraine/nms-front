@@ -2,16 +2,14 @@ import React, { ReactNode } from 'react';
 import { HeadingProps } from '../../types/custom/Heading';
 
 const Heading = ({
-  fontSize = 'lg',
-  fontWeight = 'medium',
-  color = 'txt-primary',
+  fontSize = 'text-lg',
+  fontWeight = 'font-medium',
+  color = 'text-txt-primary',
   className = '',
   children,
 }: HeadingProps) => {
   return (
-    <h2
-      className={`text-${fontSize} font-${fontWeight} text-${color} ${className}`}
-    >
+    <h2 className={`${fontSize} ${fontWeight} ${color} ${className}`}>
       {children}
     </h2>
   );

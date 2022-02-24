@@ -8,9 +8,9 @@ export default function LogoText({
 }) {
   return (
     <Heading
-      fontSize="5xl"
-      fontWeight="bold"
-      color="main"
+      fontSize="text-5xl"
+      fontWeight="font-bold"
+      color="text-main"
       className={`${!ignorePadding ? 'xl:py-60' : 'py-14'} text-center`}
     >
       NMS

@@ -3,8 +3,8 @@ import { ButtonPropTypes, ButtonStyleType } from '../../types/custom/Button';
 export default function Button<T>({
   children,
   styleType = 'fill',
-  color = 'main',
-  bgColor = 'primary',
+  color = 'text-main',
+  bgColor = 'bg-primary',
   full,
   icon,
   className = '',
@@ -14,17 +14,15 @@ export default function Button<T>({
   ...attrs
 }: ButtonPropTypes<T>) {
   const buttonStyle: ButtonStyleType = {
-    fill: ` ${
-      !icon && 'min-w-minimum'
-    }   border-2 border-solid border-${bgColor} bg-${bgColor} text-main`,
+    fill: ` ${!icon && 'min-w-minimum'}  ${bgColor} text-main`,
     outline: ` ${
       !icon && 'min-w-minimum'
-    }  border-2 border-solid border-${bgColor} text-${color}`,
-    text: `text-${color} hover:${hoverStyle}`,
+    }  border border-solid ${bgColor} ${color}`,
+    text: `${color} hover:${hoverStyle}`,
   };
 
   // determine padding based on the style type of button
-  const padding = icon ? '' : full ? 'py-2' : 'py-2 px-8';
+  const padding = icon ? '' : full ? 'py-2' : 'py-2 px-4';
 
   return (
     <button

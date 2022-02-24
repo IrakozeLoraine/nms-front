@@ -27,7 +27,7 @@ export default function SidebarLinks({
           iconLink={link.iconLink}
           active={activeIndexAuto === i}
           fontSize={link.fontSize}
-          fontWeight={isRight ? 'normal' : 'medium'}
+          fontWeight={isRight ? 'font-normal' : 'font-medium'}
           isRight={isRight}
           className={className}
         />

@@ -43,9 +43,9 @@ export default function SignupMolecule() {
     <>
       <Form onSubmit={handleSubmit}>
         <Heading
-          fontSize="xl"
-          fontWeight="normal"
-          color="txt-primary"
+          fontSize="text-xl"
+          fontWeight="font-normal"
+          color="text-txt-primary"
           className="pb-12 text-center uppercase"
         >
           Sign up

@@ -10,8 +10,8 @@ export default function Notification({ notifications }: NotificationProps) {
   return (
     <div className="bg-main flex flex-col pb-6 p-4 w-72 overflow-y-auto h-96">
       <Heading
-        fontSize="xl"
-        color="primary"
+        fontSize="text-xl"
+        color="text-primary"
         className={`py-4 text-center uppercase`}
       >
         Notifications
@@ -27,9 +27,9 @@ export default function Notification({ notifications }: NotificationProps) {
             >
               <div className="pt-7 pb-3">
                 <Heading
-                  fontSize="base"
-                  fontWeight="light"
-                  color="secondary-500"
+                  fontSize="text-base"
+                  fontWeight="font-light"
+                  color="text-secondary-500"
                 >
                   {moment(notification.created_on).format('MM/DD/YYYY')}
                 </Heading>
@@ -37,14 +37,14 @@ export default function Notification({ notifications }: NotificationProps) {
               <div className="flex justify-between items-center gap-6">
                 <div className="flex flex-col gap-1 pb-4">
                   <Heading
-                    color="txt-primary"
-                    fontSize="base"
-                    fontWeight="semibold"
+                    color="text-txt-primary"
+                    fontSize="text-base"
+                    fontWeight="font-semibold"
                   >
                     {notification.title}
                   </Heading>
 
-                  <Heading fontSize="sm" color="txt-primary">
+                  <Heading fontSize="text-sm" color="text-txt-primary">
                     {notification.message}
                   </Heading>
                 </div>
@@ -63,7 +63,7 @@ export default function Notification({ notifications }: NotificationProps) {
         ))
       ) : (
         <div className="flex flex-col gap-1 pb-4 pt-4">
-          <Heading fontSize="sm" color="txt-primary">
+          <Heading fontSize="text-sm" color="text-txt-primary">
             No new notifications
           </Heading>
         </div>

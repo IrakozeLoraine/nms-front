@@ -1,5 +1,5 @@
 import { ButtonHTMLAttributes, DOMAttributes, ReactNode } from 'react';
-import { IColorType, ITextDecorationType } from '..';
+import { IBgColorType, IColorType, ITextDecorationType } from '..';
 
 type ButtonType = 'fill' | 'outline' | 'text';
 
@@ -14,7 +14,7 @@ export interface ButtonPropTypes<T>
   icon?: boolean;
   styleType?: ButtonType;
   color?: IColorType;
-  bgColor?: IColorType;
+  bgColor?: IBgColorType;
   hoverStyle?: ITextDecorationType;
   roundedLg?: boolean;
   className?: string;

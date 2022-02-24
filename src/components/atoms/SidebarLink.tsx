@@ -9,10 +9,10 @@ export default function SidebarLink({
   iconLink,
   title,
   active,
-  fontSize = 'base',
+  fontSize = 'text-base',
   isRight = false,
   transformText = 'capitalize',
-  fontWeight = 'medium',
+  fontWeight = 'font-medium',
   className = '',
 }: SidebarLinkProps) {
   return (
@@ -28,7 +28,7 @@ export default function SidebarLink({
         {active && isRight && <img src={leftArrow} alt="" />}
         {iconLink && <img src={iconLink} alt="" />}
         <span
-          className={`text-main text-${fontSize} px-1 font-${fontWeight} ${transformText}`}
+          className={`text-main ${fontSize} px-1 ${fontWeight} ${transformText}`}
         >
           {title}
         </span>
