@@ -19,6 +19,7 @@ export default function Home() {
       <div className="block relative w-full h-auto px-11">
         <div className="bg-main px-24 py-8 h-screen">
           <Tab tabs={tabs}>Hello</Tab>
+          
         </div>
       </div>
     </Dashboard>
