@@ -54,3 +54,8 @@ export type ITextDecorationType = 'no-underline' | 'underline';
     title: string
     hasColor?: boolean
 }
+
+ export type BarMoleculeType = {
+    courseTitle: string
+    notes:string[]
+}

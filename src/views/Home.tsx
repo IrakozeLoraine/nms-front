@@ -1,6 +1,7 @@
 import React from 'react';
 import Tab from '../components/atoms/Tab';
 import PopupMolecule from '../components/molecule/PopupMolecule';
+import BarsHolder from '../components/organisms/BarsHolder';
 import Dashboard from '../layout/Dashboard';
 import { TabType } from '../types/custom/Tabs';
 
@@ -20,7 +21,7 @@ export default function Home() {
       <div className="block relative w-full h-auto px-11">
         <div className="bg-main px-24 py-8 h-screen">
           <Tab tabs={tabs}>
-            <PopupMolecule/>
+            <BarsHolder/>
           </Tab>
           
         </div>
