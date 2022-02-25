@@ -50,3 +50,7 @@ export type IFontWeightType =
   | 'font-light';
 
 export type ITextDecorationType = 'no-underline' | 'underline';
+ export type BarType = {
+    title: string
+    hasColor?: boolean
+}
