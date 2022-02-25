@@ -51,11 +51,17 @@ export type IFontWeightType =
 
 export type ITextDecorationType = 'no-underline' | 'underline';
  export type BarType = {
-    title: string
+   title: string
+   subnotes:string[]
     hasColor?: boolean
+}
+
+export type NotesType = {
+  mainNote: string
+  subnotes:string[]
 }
 
  export type BarMoleculeType = {
     courseTitle: string
-    notes:string[]
+    notes:NotesType[]
 }

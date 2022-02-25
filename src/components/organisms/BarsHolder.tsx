@@ -8,20 +8,32 @@ export default function BarsHolder() {
     const tapcontent: BarMoleculeType[] = [
         {
             courseTitle: "Physics",
-            notes:['Dynamics', 'Kinematics']
+            notes: [
+                {
+                    mainNote: "Kinematics",
+                    subnotes:["Graph","Exercises"]
+                },
+                {
+                    mainNote: "Dynamics",
+                    subnotes: ["Momentum", "Exercises"]
+                }
+            ]
         },
         {
-            courseTitle: "Mathematics",
-            notes: ['Dynamics', 'Kinematics']
+            courseTitle: "Maths",
+            notes: [
+                {
+                    mainNote: "Kinematics",
+                    subnotes: ["Graph", "Exercises"]
+                },
+                {
+                    mainNote: "Dynamics",
+                    subnotes: ["Momentum", "Exercises"]
+                }
+            ]
         },
-        {
-            courseTitle: "Physics",
-            notes: ['Dynamics', 'Kinematics']
-        },
-    {
-        courseTitle: "Physics",
-            notes: ['Dynamics', 'Kinematics']
-    }
+
+
     ]
     return (
         <div className="mt-12">

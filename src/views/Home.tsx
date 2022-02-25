@@ -19,7 +19,7 @@ export default function Home() {
   return (
     <Dashboard showSearch>
       <div className="block relative w-full h-auto px-11">
-        <div className="bg-main px-24 py-8 h-screen">
+        <div className="bg-main px-24 py-8 h-full ">
           <Tab tabs={tabs}>
             <BarsHolder/>
           </Tab>
