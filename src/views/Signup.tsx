@@ -3,7 +3,7 @@ import SignupMolecule from '../components/molecule/SignupMolecule';
 
 export default function Signup() {
   return (
-    <AuthForm>
+    <AuthForm children={undefined}>
       <SignupMolecule />
     </AuthForm>
   );
