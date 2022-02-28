@@ -4,6 +4,7 @@ import { Route, Routes } from 'react-router-dom';
 import Signin from './views/Signin';
 import AdminLogin from './views/AdminLogin';
 import Home from './views/Home';
+import PopupAtom from './components/atoms/PopupAtom';
 
 function App() {
   return (
@@ -14,6 +15,10 @@ function App() {
         <Route path="/login" element={<Signin />} />
         <Route path="/admin-login" element={<AdminLogin />} />
         <Route path="/dashboard/home" element={<Home />} />
+        <Route
+          path="/dashboard/popup"
+          element={<PopupAtom open={true}>Welcome</PopupAtom>}
+        />
       </Routes>
     </>
   );
