@@ -10,7 +10,8 @@ module.exports = {
           500: '#A3A3A3',
         },
         primary: '#2F9E98',
-        'txt-primary': '#575757',
+        'txt-primary': '#939393',
+
       },
       minWidth: {
         minimum: '6.25rem',
