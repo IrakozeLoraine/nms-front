@@ -60,9 +60,12 @@ export default function SigninMolecule({
           value={auth.password}
           handleChange={(e) => handleChange(e as ChangeEvent<HTMLInputElement>)}
         />
-        <p className="flex justify-end items-end uppercase text-txt-primary pb-5">
+        <a
+          href=""
+          className="flex justify-end items-end uppercase text-txt-primary pb-5 text-xs"
+        >
           Forgot password?
-        </p>
+        </a>
         <Checkbox
           isChecked={auth.remember}
           handleChange={(e) => handleChange(e)}

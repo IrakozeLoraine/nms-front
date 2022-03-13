@@ -50,18 +50,24 @@ export type IFontWeightType =
   | 'font-light';
 
 export type ITextDecorationType = 'no-underline' | 'underline';
- export type BarType = {
-   title: string
-   subnotes:string[]
-    hasColor?: boolean
-}
+export type BarType = {
+  title: string;
+  subnotes: string[];
+  hasColor?: boolean;
+  iconImg?: string;
+};
 
 export type NotesType = {
-  mainNote: string
-  subnotes:string[]
-}
+  mainNote: string;
+  subnotes: string[];
+};
 
- export type BarMoleculeType = {
-    courseTitle: string
-    notes:NotesType[]
-}
+export type BarMoleculeType = {
+  courseTitle: string;
+  notes: NotesType[];
+  link?: {
+    to: string;
+    label: string;
+  };
+  iconImg?: string;
+};
