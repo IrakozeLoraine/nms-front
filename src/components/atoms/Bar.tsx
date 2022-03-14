@@ -1,6 +1,6 @@
-import { BarType } from '../../types';
-import Delete from '../../public/icons/ellipse.svg';
-import { useState } from 'react';
+import { BarType } from '../../types'
+import Delete from '../../public/icons/ellipse.svg'
+import { useState } from 'react'
 
 export default function Bar({
   hasColor,
