@@ -1,49 +1,29 @@
-import Bar from "../atoms/Bar";
-import Delete from '../../public/icons/ellipse.svg'
-import Popup from "reactjs-popup";
-import { BarMoleculeType, BarType } from "../../types";
-import PopupMolecule from "../molecule/PopupMolecule";
+import { BarMoleculeType, BarType } from '../../types';
+import DropdownMolecule from '../molecule/PopupMolecule';
 
-export default function BarsHolder() {
-    const tapcontent: BarMoleculeType[] = [
-        {
-            courseTitle: "Physics",
-            notes: [
-                {
-                    mainNote: "Kinematics",
-                    subnotes:["Graph","Exercises"]
-                },
-                {
-                    mainNote: "Dynamics",
-                    subnotes: ["Momentum", "Exercises"]
-                }
-            ]
-        },
-        {
-            courseTitle: "Maths",
-            notes: [
-                {
-                    mainNote: "Kinematics",
-                    subnotes: ["Graph", "Exercises"]
-                },
-                {
-                    mainNote: "Dynamics",
-                    subnotes: ["Momentum", "Exercises"]
-                }
-            ]
-        },
-
-
-    ]
-    return (
-        <div className="mt-12">
-            {
-                tapcontent.map((item:BarMoleculeType, i: number) => {
-                    return (
-                    <PopupMolecule key={i} courseTitle={item.courseTitle} notes={item.notes}/>
-                    )
-                })
-            }
-        </div>
-    )
+export default function BarsHolder({
+  content,
+  iconImg,
+}: {
+  content: BarMoleculeType[];
+  iconImg?: string;
+}) {
+  return (
+    <div className="mt-12">
+      {content.map((item: BarMoleculeType, i: number) => {
+        return (
+          <DropdownMolecule
+            key={i}
+            courseTitle={item.courseTitle}
+            notes={item.notes}
+            iconImg={iconImg}
+            link={{
+              to: '',
+              label: 'download all',
+            }}
+          />
+        );
+      })}
+    </div>
+  );
 }

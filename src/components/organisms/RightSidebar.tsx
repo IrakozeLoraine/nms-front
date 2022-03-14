@@ -1,14 +1,7 @@
-import React from 'react';
 import { SidebarLinkProps } from '../../types/custom/Sidebar';
-import LogoText from '../atoms/LogoText';
 import SidebarLinks from '../molecule/SidebarLinks';
 
-import home from '../../public/icons/home.svg';
-import note from '../../public/icons/note.svg';
-import profile from '../../public/icons/profile.svg';
-import logout from '../../public/icons/logout.svg';
 import Button from '../atoms/Button';
-import { Link } from 'react-router-dom';
 import Heading from '../atoms/Heading';
 
 export default function RightSidebar() {
@@ -16,7 +9,7 @@ export default function RightSidebar() {
     const links: SidebarLinkProps[] = [
       {
         title: 'Mathematics',
-        to: '/dashboard/home',
+        to: '/dashboard/notes',
       },
       {
         title: 'English',

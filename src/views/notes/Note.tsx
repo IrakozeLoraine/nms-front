@@ -1,21 +1,24 @@
-import { TabType } from '../types/custom/Tabs';
-import Download from '../public/icons/download.svg';
-import { BarMoleculeType } from '../types';
-import PaperPage from '../layout/PaperPage';
+import { BarMoleculeType } from '../../types';
+import { TabType } from '../../types/custom/Tabs';
+import Download from '../../public/icons/download.svg';
+import PaperPage from '../../layout/PaperPage';
 
-export default function Home() {
+export default function Note() {
   const tabs: TabType[] = [
     {
-      label: 'Recently uploaded',
-      href: `/dashboard/home`,
+      label: 'Notes',
+      href: `/dashboard/notes`,
     },
     {
-      label: 'Recently accessed',
+      label: 'My Uploads',
+      href: `/dashboard/my-uploads`,
+    },
+    {
+      label: 'Upload',
       href: `/dashboard/notes`,
     },
   ];
-
-  const recentUploads: BarMoleculeType[] = [
+  const notes: BarMoleculeType[] = [
     {
       courseTitle: 'Physics',
       notes: [
@@ -27,11 +30,6 @@ export default function Home() {
           mainNote: 'Dynamics',
           subnotes: ['Momentum', 'Exercises'],
         },
-      ],
-    },
-    {
-      courseTitle: 'Maths',
-      notes: [
         {
           mainNote: 'Kinematics',
           subnotes: ['Graph', 'Exercises'],
@@ -43,5 +41,5 @@ export default function Home() {
       ],
     },
   ];
-  return <PaperPage tabs={tabs} content={recentUploads} iconImg={Download} />;
+  return <PaperPage tabs={tabs} content={notes} iconImg={Download} />;
 }

@@ -15,7 +15,7 @@ export default function LeftSidebar() {
     const links: SidebarLinkProps[] = [
       {
         title: 'Home',
-        to: '/dashboard/home',
+        to: '/dashboard/recent-uploads',
         iconLink: home,
       },
       {
@@ -33,7 +33,7 @@ export default function LeftSidebar() {
   };
   return (
     <div className="flex flex-col justify-between bg-primary md:h-screen overflow-hidden">
-      <Link to={'/dashboard/home'} className="px-4 py-4">
+      <Link to={'/dashboard/recent-uploads'} className="px-4 py-4">
         <LogoText ignorePadding />
       </Link>
       <div className="mb-auto h-10">
