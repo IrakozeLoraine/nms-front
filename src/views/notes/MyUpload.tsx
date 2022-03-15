@@ -4,7 +4,7 @@ import BarsHolder from '../../components/organisms/BarsHolder';
 import Dashboard from '../../layout/Dashboard';
 import { BarMoleculeType } from '../../types';
 import { TabType } from '../../types/custom/Tabs';
-import Download from '../../public/icons/download.svg';
+import Delete from '../../public/icons/delete.svg';
 
 export default function MyUpload() {
   const tabs: TabType[] = [
@@ -48,7 +48,7 @@ export default function MyUpload() {
     <div className="block relative w-full h-auto px-11">
       <div className="bg-main px-24 py-8 h-full ">
         <Tab tabs={tabs}>
-          <BarsHolder content={notes} iconImg={Download} />
+          <BarsHolder content={notes} iconImg={Delete} />
         </Tab>
       </div>
     </div>

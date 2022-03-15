@@ -1,4 +1,3 @@
-import React from 'react';
 import Tab from '../components/atoms/Tab';
 import BarsHolder from '../components/organisms/BarsHolder';
 import { BarMoleculeType } from '../types';

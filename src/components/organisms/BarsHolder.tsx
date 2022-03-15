@@ -17,10 +17,10 @@ export default function BarsHolder({
             courseTitle={item.courseTitle}
             notes={item.notes}
             iconImg={iconImg}
-            link={{
-              to: '',
-              label: 'download all',
-            }}
+            // link={{
+            //   to: '',
+            //   // label: 'download all',
+            // }}
           />
         );
       })}

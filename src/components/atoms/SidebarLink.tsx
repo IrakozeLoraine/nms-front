@@ -17,7 +17,7 @@ export default function SidebarLink({
 }: SidebarLinkProps) {
   return (
     <div
-      className={`px-8 cursor-pointer py-0 bg-primary text-main ${className}`}
+      className={`px-8 cursor-pointer py-0 uppercase bg-primary text-main ${className}`}
     >
       <Link
         to={to}

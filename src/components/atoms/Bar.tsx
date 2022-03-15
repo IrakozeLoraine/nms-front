@@ -11,7 +11,7 @@ export default function Bar({
   const [toggle, hangleToggle] = useState<boolean>(false);
   return (
     <div
-      className={`cursor-pointer mt-4 p-3  ${
+      className={`cursor-pointer mt-4 p-3 rounded-lg  ${
         hasColor ? 'bg-gray-100' : 'bg-green-50'
       } `}
       onClick={() => {
@@ -21,8 +21,8 @@ export default function Bar({
       }}
     >
       <div className="flex justify-between items-center">
-        <div>{title}</div>
-        <div>
+        <div className='px-1'>{title}</div>
+        <div className='px-2'>
           <img src={iconImg} alt="" />
         </div>
       </div>
