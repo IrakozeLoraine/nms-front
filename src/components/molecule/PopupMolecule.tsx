@@ -11,7 +11,7 @@ export default function DropdownMolecule({
   return (
     <div className="mt-12">
       <div className="flex justify-between">
-        <h1 className="text-gray-300 uppercase font-bold">{courseTitle}</h1>
+        <h1 className="text-gray-300 uppercase">{courseTitle}</h1>
         {link && (
           <Link to={link.to} className="uppercase text-primary">
             {link.label}
