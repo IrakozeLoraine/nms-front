@@ -14,6 +14,10 @@ code {
     monospace;
 }
 
+input{
+  color: '#939393';
+}
+
 ::-webkit-scrollbar {
   width: 6px;
   max-height: 30px;
