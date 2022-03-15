@@ -2,6 +2,7 @@ import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import MyUpload from '../views/notes/MyUpload';
 import Note from '../views/notes/Note';
+import Profile from '../views/profiles/Users';
 import Accessed from '../views/recent/Accessed';
 import Uploaded from '../views/recent/Uploaded';
 import Dashboard from './Dashboard';
@@ -14,6 +15,7 @@ export default function AuthRoute() {
       <Route path="recent-access" element={<Accessed />} />
       <Route path="my-uploads" element={<MyUpload />} />
       <Route path="notes" element={<Note />} />
+      <Route path="users" element={<Profile/>} />
     </Routes>
   );
   return <Dashboard showSearch>{AuthenticatedRoutes()}</Dashboard>;

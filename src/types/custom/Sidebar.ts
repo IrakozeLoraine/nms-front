@@ -10,4 +10,5 @@ export interface SidebarLinkProps {
   transformText?: ITextTransformType;
   fontWeight?: IFontWeightType;
   className?: string;
+  uppercase?: boolean;
 }

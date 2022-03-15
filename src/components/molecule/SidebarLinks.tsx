@@ -30,6 +30,7 @@ export default function SidebarLinks({
           fontWeight={isRight ? 'font-normal' : 'font-medium'}
           isRight={isRight}
           className={className}
+          uppercase
         />
       ))}
     </>
