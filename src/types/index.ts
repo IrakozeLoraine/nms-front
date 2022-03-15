@@ -71,3 +71,7 @@ export type BarMoleculeType = {
   };
   iconImg?: string;
 };
+
+export type FormMoleculeType = {
+  
+}
